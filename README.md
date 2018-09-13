@@ -105,7 +105,19 @@ Here's a list of useful commands you can use to explore a Linux VM on Azure, in 
 34. In the Azure Portal, using the search box, search for the `custom` virtual machine, click on it, then browse to _Backup_
 35. Type in your resorce group name, in my case, `canada`, and click _Enable backup_ (this uses the default backup policy)
 
+## Follow this repo for more!
+
+Topics in the TODO for this repo:
+
+* Instance Metadata Service
+* Accelerated Networking
+* Performance tuning
+* Storage architecture for Linux on Azure
+* More scale-out cluster goodness
+* Monitoring and security
+* Custom images from on-premises, incl. with Packer
+
 ## Resources
 
-* [Ansible resources]()
-* [Information for non-endorsed distributions]()
+* [Automate Azure resources with Ansible](https://channel9.msdn.com/Shows/Azure-Friday/Automate-Azure-Resources-with-Ansible)
+* [Information for non-endorsed distributions](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-generic)
