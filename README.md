@@ -119,5 +119,7 @@ Topics in the TODO for this repo:
 
 ## Resources
 
+* [What is _actually_ supported in Ansible?](https://docs.microsoft.com/en-us/azure/ansible/ansible-matrix)
+* [How to do dynamic inventory in Ansible?](https://docs.ansible.com/ansible/2.6/scenario_guides/guide_azure.html#dynamic-inventory-script)
 * [Automate Azure resources with Ansible](https://channel9.msdn.com/Shows/Azure-Friday/Automate-Azure-Resources-with-Ansible)
 * [Information for non-endorsed distributions](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-generic)
