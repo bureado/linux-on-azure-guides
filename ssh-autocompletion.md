@@ -12,6 +12,7 @@ Here, I document the `ssh_config` route. In the global SSH client configuration 
 
 A script that integrates `az vm list` (and its JSON output) with `ssh_config` could look like:
 
+```
   #!/bin/sh
 
   if [ -f ˜/.ssh/config ]
@@ -47,9 +48,11 @@ A script that integrates `az vm list` (and its JSON output) with `ssh_config` co
     echo "#AZURE_VMS" >> ~/.ssh/config
     cat ~/.ssh/azure_vms >> ~/.ssh/config
   fi
+```
   
 In Cloud Shell, you can store this script in your home directory, and make it executable with `chmod 755 ssh-host-builder`. You can call this script manually, or when you login (adding to your `.bashrc`). You can also call this script whenever you run an `az vm` command (for example, `create`, `start` or `stop` operations that can mutate the public IP address status of your VM) by adding the following to `.bashrc`:
 
+```
   PROMPT_COMMAND=__prompt_command
   
   __prompt_command() {
@@ -63,5 +66,6 @@ In Cloud Shell, you can store this script in your home directory, and make it ex
      fi
   fi
   }
+```
 
 If you add a `sleep` stanza to the main shell script, you could wait a minute or two before actually running the refresh. In the future, you could use Azure-generated events (like "new IP address allocated") to refresh `.ssh/config`, but it's likely there would still be a polling situation, particularly if you use Cloud Shell.
